@@ -1,34 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="assets/style/main.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/style/main.css" />
     <title>Inspire</title>
-</head>
+  </head>
 
-<body>
-    <main class="container-flex" id="app">    
-    <div class="row">
+  <body>
+    <main class="container-fluid" id="app">
+      <div class="row">
         <div class="col offset-9">
-            <span id="weather"></span>
-            
+          <span id="weather"></span>
         </div>
-    </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          
 
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    Todo List
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Todo</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <span id="todos"></span>
+        </div>
+        <div class="modal-footer">
+          <form class="form-inline align-self-center py-3" onsubmit="app.todoController.addTodo(event)">
+            <input type="text" class="form-control" name="newTodo" id="newTodo"  placeholder="Add Todo">
+            <button type="submit" class="btn btn-outline-info">+</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="top" title ="List" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+    Todo Popover
+  </button>
         
+        </div>
+      </div>
     </main>
     <footer class="container-fluid bg-transparent text-light">
-        <div class="row text-center">
-            <div class="col">
-                <p><small>Made with love by Codeworks</small></p>
-            </div>
+      <div class="row text-center">
+        <div class="col">
+          <p><small>Made with love by Codeworks</small></p>
         </div>
+      </div>
     </footer>
+   
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="app/main.js" type="module"></script>
-</body>
-
+    <script>
+      $(document).ready(function(){
+        $('[data-toggle="popover"]').popover();   
+      });
+      </script>
+  </body>
 </html>
