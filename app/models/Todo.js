@@ -9,7 +9,7 @@ export default class Todo {
     return /*html*/ `
         <div class="row">
             <div class="col-1 text-center">
-              <input id="${this.id}" type="checkbox" onchange="app.todoController.toggleTodoStatus('${this.id}')">
+              <input id="${this.id}" type="checkbox" onchange="app.todoController.toggleTodoStatus('${this.id}')" ${this.completed == true ? "checked" : ""}>
               </div>
             <div class="col-9">
                 <p>${this.description}</p>
