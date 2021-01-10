@@ -9,11 +9,15 @@ export default class Weather {
   get Template(){
     return /*html*/ `
     <div class="row">
-                <div class = "card shadow">
+                <div class = "card shadow text-white op">
                     <div class = "card-body">
-                        <h3 class = "card-title">Weather</h3>
+                        
                         <h5 class = "card-subtitle">${this.city}</h5>
-                        <h6 class = "card-body">Temp: ${this.fahrenheit}&#176F ${this.celsius}&#176C</h6>
+                        <h1 class = "card-body" id = "temp">${this.fahrenheit}&#176F</h1>
+                        <div class="custom-control custom-switch">
+                        <input type="checkbox"  class="custom-control-input" id="celsius" onchange="app.weatherController.switch()">
+                        <label class="custom-control-label" for="celsius">Show Celcius</label>
+                        </div>
                     </div>
                 </div>
             </div>

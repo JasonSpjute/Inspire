@@ -12,29 +12,33 @@
   <body>
     <main class="container-fluid" id="app">
       <div class="row my-3">
-        <div class="col offset-9">
+        <div class="col offset-10">
           <span id="weather"></span>
         </div>
       </div>
       <div class = "row clock align-items-center text-center">
-        <div class = "col">
-          <p>is it in the middle</p>
+        <div class="col"></div>
+        <div class = "col-auto op text-white p-3 rounded w-25">
+          <h1 id = "clock"></h1>
         </div>
+        <div class="col"></div>
       </div>
 
     </main>
     <footer class="container-fluid bg-transparent">
       <div class = "row text-center text-light">
-        <div class="offset-3 col-6">
+        <div class="col"></div>
+        <div class="col-auto pt-3 rounded op w-50">
           <p onmouseover = "app.quoteController.hover()" onmouseout = "app.quoteController.out()">"<span id = "quote"></span>"</p>
           <span id="by"></span>
         </div>
+        <div class="col"></div>
       </div>
       <div class="row text-right">
         <div class="col my-3 ">
           
 
-<button type="button" class="btn text-white" data-toggle="modal" data-target="#exampleModal">
+<button type="button" class="btn text-white op" data-toggle="modal" data-target="#exampleModal">
     Todo List
   </button>
   
@@ -62,7 +66,7 @@
     </div>
   </div>
 
-  <button type="button" class="btn text-white" data-container="body" data-toggle="popover" data-placement="top" title ="List" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+  <button type="button" class="btn text-white op" data-container="body" data-toggle="popover" data-placement="top" title ="List" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
     Todo Popover
   </button>
     </footer>

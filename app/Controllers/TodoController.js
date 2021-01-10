@@ -10,8 +10,10 @@ function _drawTodos() {
 }
 
 function _drawCount(){
-  let count = ProxyState.todos.filter(l => l.completed == true)
-  document.getElementById('count').innerText = count.length.toString()
+  // let count = ProxyState.todos.filter(l => l.completed == true)
+  // document.getElementById('count').innerText = count.length.toString()
+  let count = $('#table :input[type="checkbox"]:checked').length
+  console.log(count)
 }
 
 
