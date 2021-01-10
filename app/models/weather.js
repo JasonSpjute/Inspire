@@ -9,7 +9,7 @@ export default class Weather {
   get Template(){
     return /*html*/ `
     <div class="row">
-                <div class = "card shadow text-white op">
+                <div class = "card shadow text-white op px-4">
                     <div class = "card-body">
                         
                         <h5 class = "card-subtitle">${this.city}</h5>
