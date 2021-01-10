@@ -11,11 +11,11 @@ export default class Todo {
             <div class="col-1 text-center">
               <input id="${this.id}" type="checkbox" onchange="app.todoController.toggleTodoStatus('${this.id}')" ${this.completed == true ? "checked" : ""}>
               </div>
-            <div class="col-9">
+            <div class="col-9 text-left">
                 <p>${this.description}</p>
             </div>
             <div class="col-1">
-                <button class="fas fa-trash-alt btn text-danger" onclick="app.itemController.removeTodo('${this.id}')"></button>
+                <button class="fas fa-trash-alt btn text-danger" onclick="app.todoController.removeTodo('${this.id}')"></button>
             </div>
         </div>
         `;
