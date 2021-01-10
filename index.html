@@ -58,7 +58,7 @@
         <div class="modal-footer">
           <h6><span id = "count"></span> completed</h6>
           <form class="form-inline align-self-center py-3" onsubmit="app.todoController.addTodo(event)">
-            <input type="text" class="form-control" name="newTodo" id="newTodo"  placeholder="Add Todo">
+            <input type="text" class="form-control" name="newTodo" id="newTodo" minlength="3" maxlength = "30" placeholder="Add Todo">
             <button type="submit" class="btn btn-outline-info">+</button>
           </form>
         </div>
@@ -66,9 +66,9 @@
     </div>
   </div>
 
-  <button type="button" class="btn text-white op" data-container="body" data-toggle="popover" data-placement="top" title ="List" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+  <!-- <button type="button" class="btn text-white op" data-container="body" data-toggle="popover" data-placement="top" title ="List" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
     Todo Popover
-  </button>
+  </button> -->
     </footer>
    
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
