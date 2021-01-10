@@ -10696,4 +10696,8 @@ main {
   flex-grow: 1;
 }
 
+.clock {
+  min-height: 50vh;
+}
+
 /*# sourceMappingURL=main.css.map */
