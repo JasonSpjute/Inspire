@@ -11,11 +11,20 @@ function _drawTodos() {
   document.getElementById('todos').innerHTML = template
 }
 
+function _drawCount(){
+  let count = ProxyState.todos.filter(l => l.completed == true)
+  console.log(count.length)
+  document.getElementById('count').innerText = count.length.toString()
+}
+
+
 export default class TodoController {
   constructor() {
     //TODO Remember to register your subscribers
     ProxyState.on("todos", _drawTodos)
+    ProxyState.on("todos", _drawCount)
     _drawTodos()
+    _drawCount()
     todoService.getTodos();
   }
 
@@ -48,9 +57,11 @@ export default class TodoController {
   toggleTodoStatus(todoId) {
     try {
       todoService.toggleTodoStatus(todoId);
+      _drawCount()
     } catch (error) {
       console.error(error)
     }
+    
   }
 
   /**

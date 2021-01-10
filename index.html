@@ -23,11 +23,16 @@
       </div>
     </main>
     <footer class="container-fluid bg-transparent">
+      <div class = "row text-center text-light">
+        <div class="offset-3 col-6">
+          <p id = "quote">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi laboriosam asperiores ex, laudantium molestiae fugiat voluptas dolores officia? Amet repudiandae itaque sapiente neque ipsam sunt eaque excepturi, animi quidem? Saepe!</p>
+        </div>
+      </div>
       <div class="row text-right">
         <div class="col my-3 ">
           
 
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+<button type="button" class="btn text-white" data-toggle="modal" data-target="#exampleModal">
     Todo List
   </button>
   
@@ -45,6 +50,7 @@
           <span id="todos"></span>
         </div>
         <div class="modal-footer">
+          <h6><span id = "count"></span> completed</h6>
           <form class="form-inline align-self-center py-3" onsubmit="app.todoController.addTodo(event)">
             <input type="text" class="form-control" name="newTodo" id="newTodo"  placeholder="Add Todo">
             <button type="submit" class="btn btn-outline-info">+</button>
@@ -54,7 +60,7 @@
     </div>
   </div>
 
-  <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="top" title ="List" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+  <button type="button" class="btn text-white" data-container="body" data-toggle="popover" data-placement="top" title ="List" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
     Todo Popover
   </button>
     </footer>
